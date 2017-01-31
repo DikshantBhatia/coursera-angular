@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
 <head>
   <meta charset="utf-8">
-  <title>Hello Coursera </title>
+  <title>Coursera Angular app</title>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
-  <h1>Hello coursera angular</h1>
+  <h1>Name Caclulator</h1>
+  <div ng-controller="NameCalcController">
+      <div>
+        Your name : <input type="text" ng-model="name" ng-keyup="displayNumeric();">
+      </div>
+      <div>Total numeric value of person's name is: {{numericValue}}</div>
+  </div>
+  <h1>Dependency Injection</h1>
+  <div ng-controller="DIController">
+       <div>
+        Your name in capital : <input type="text" ng-model="name" ng-blur="upper();">
+      </div>
+  </div>
+  <div ng-controller="ExpressionController">
+    <div>
+      <button ng-click="feedYakov()">Feed Yakov</button>
+      <br>
+      <img ng-src="images/yaakov_{{stateOfBeing}}.png">
+    </div>
+  </div>
 </body>
 </html>
